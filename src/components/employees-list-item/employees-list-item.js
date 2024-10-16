@@ -7,8 +7,6 @@ const EmployeesListItem = ({
   onToggleProp,
   increase,
   rise,
-  onChange,
-  chang,
 }) => {
   let classNames = "list-group-item d-flex justify-content-between";
   if (increase) {
@@ -31,7 +29,6 @@ const EmployeesListItem = ({
         type="text"
         className="list-group-item-input"
         defaultValue={salary + "$"}
-        onChange={chan}
       />
       <div className="d-flex justify-content-center align-items-center">
         <button

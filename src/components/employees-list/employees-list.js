@@ -11,13 +11,8 @@ class EmployeesList extends Component {
     };
   }
   render() {
-    let { data, onDelete, onToggleProp, onChange } = this.props;
+    let { data, onDelete, onToggleProp} = this.props;
     let { salary } = this.state;
-    const chang = (salary) => {
-      this.setState({
-        salary: salary,
-      });
-    };
     const elements = data.map((item) => {
       const { id, ...itemProps } = item;
 
@@ -26,15 +21,12 @@ class EmployeesList extends Component {
           onToggleProp={(e) =>
             onToggleProp(id, e.currentTarget.getAttribute("data-prop"))
           }
-          onChange={(() => id, salary)}
           onDelete={() => onDelete(id)}
-          chang={chang}
           key={id}
           {...itemProps}
         />
       );
     });
-    console.log(elements);
 
     return <ul className="app-list list-group">{elements}</ul>;
   }
