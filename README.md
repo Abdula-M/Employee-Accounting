@@ -30,7 +30,7 @@
 3. Перейдите в папку с проектом:
 
    ```bash
-   cd employee-management-system
+   cd Employee-Accounting
    ```
 
 4. Установите все необходимые зависимости с помощью npm:
